@@ -26,6 +26,10 @@ class Dessert:
             return True
 
 class JellyBean(Dessert):
+    def __init__(self, name, calories, flavor):
+        Dessert.__init__(self, name, calories)
+        self.flavor = flavor
+
     def set_flavor(self, flavor):
         self.flavor = flavor
 
