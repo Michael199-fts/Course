@@ -1,10 +1,10 @@
 #Задание №6
 def rps_game_winner(players_mass):
     if len(players_mass) > 2:
-        return 'WrongNumberOfPlayersError'
+        raise Exception('WrongNumberOfPlayersError')
 #исключение в случае, когда слишком много игроков
     if players_mass[0][1] != 'P' and players_mass[0][1] != 'S' and players_mass[0][1] != 'R' or players_mass[1][1] != 'P' and players_mass[1][1] != 'S' and players_mass[1][1] != 'R':
-        return 'NoSuchStrategyError'
+        raise Exception("NoSuchStrategyError")
 #исключение в случае, когда подаются неверные значения
     if players_mass[0][1] == 'P' and players_mass[1][1] == 'R':
         return players_mass[0]

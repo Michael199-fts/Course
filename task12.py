@@ -2,7 +2,7 @@
 import task11
 class JellyBean(task11.Dessert):
     def __init__(self, name, calories, flavor):
-        task11.Dessert.__init__(self, name, calories)
+        super().__init__(name, calories)
         self.flavor = flavor
 
     def set_flavor(self, flavor):
